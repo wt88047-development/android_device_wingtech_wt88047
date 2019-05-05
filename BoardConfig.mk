@@ -60,6 +60,10 @@ TARGET_KERNEL_SOURCE := kernel/wingtech/msm8916
 TARGET_KERNEL_CONFIG := lineageos_wt88047_defconfig
 BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
 
+# use kernel updated tool chain
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/$(HOST_OS)-x86/arm/linaro/arm-eabi-7.3/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
 # Power
 TARGET_HAS_NO_POWER_STATS := true
 
